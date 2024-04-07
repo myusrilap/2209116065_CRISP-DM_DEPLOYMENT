@@ -4,4 +4,4 @@ datetime
 matplotlib
 joblib
 seaborn
-scikit-learn
+scikit-learn==1.2.2
