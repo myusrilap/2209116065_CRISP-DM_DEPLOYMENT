@@ -2,3 +2,6 @@ streamlit
 pandas
 datetime
 matplotlib
+joblib
+seaborn
+scikit-learn
