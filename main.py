@@ -206,7 +206,7 @@ def determine_skill_level(avg_rating):
 # Input form for game details
 rated_game = st.checkbox('Rated Game')
 number_of_turns = st.number_input('Number of Turns', value=0)  # Default value is 0
-victory_status = st.selectbox('Victory Status', ["Beginner", "Intermediate"'Advanced', 'Expert'])
+victory_status = st.selectbox('Victory Status', ["Resign", "Out Of Time",'Mate', 'Draw'])
 white_rating = st.number_input('White Rating', value=0)  # Default value is 0
 black_rating = st.number_input('Black Rating', value=0)  # Default value is 0
 average_rating = (white_rating + black_rating) / 2
@@ -215,7 +215,7 @@ skill_level = determine_skill_level (average_rating)
 
 # Input form for selecting opening shortnames
 selected_openings = st.selectbox('Pilih Opening Shortnames:', df.columns[8:])
-victory_statuses = {'Beginner': 0, 'Intermediate': 1, 'Advanced': 2, 'Expert': 3}
+victory_statuses = {'Resign': 0, 'Out Of Time': 1, 'Mate': 2, 'Draw': 3}
 victory_status = victory_statuses[victory_status]
 
 game_types = {'Bullet': 0, 'Blitz': 1, 'Rapid': 2, 'Classical': 3}
